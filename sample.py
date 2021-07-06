@@ -18,3 +18,10 @@ print(map_example)
 #Using filter
 filter_example = list(filter(lambda num: num % 2 == 0, seq))
 print(filter_example)
+
+#Tuple unpacking
+x = [(1, 2), (3, 4), (5, 6)]
+    
+for (a, b) in x:
+    print(a)
+    print(b)
