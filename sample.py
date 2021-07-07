@@ -49,3 +49,32 @@ def countDog(words):
     return len(words.split('dog')) - 1
 
 print(countDog('This dog runs faster than the other dog dude!'))
+
+
+'''
+Use lambda expressions and the filter() function to filter out words from a list that don't start with the letter 's'. For example:
+
+seq = ['soup','dog','salad','cat','great']
+should be filtered down to:
+
+['soup','salad']
+
+'''
+
+seq = ['soup','dog','salad','cat','great']
+
+print(list(filter(lambda char: char[0] == 's', seq)))
+
+
+'''
+Final Problem
+You are driving a little too fast, and a police officer stops you. Write a function to return one of 3 possible results: "No ticket", "Small ticket", or "Big Ticket". If your speed is 60 or less, the result is "No Ticket". If speed is between 61 and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all cases.
+'''
+
+def getSpeedingTicket(speed):
+    if speed <= 60:
+        return 'No Ticket'
+    elif speed >= 61 and speed < 81:
+        return 'Small Ticket'
+    else:
+        return 'Big Ticket'
